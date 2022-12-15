@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+@layer components {
+  .field-under {
+    @apply block w-full px-0.5
+    border-0 border-b-2 border-neutral-300
+    focus:ring-0 focus:border-neutral-800
+    bg-transparent transition-colors
+  }
+}

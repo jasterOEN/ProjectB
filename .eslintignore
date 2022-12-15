@@ -1,0 +1,5 @@
+# Ignore built files
+build/*
+public/*
+server/build*
+app/styles*

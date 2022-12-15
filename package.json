@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build:css": "cross-env NODE_ENV=production postcss styles --dir ./app/styles",
+    "build:remix": "cross-env NODE_ENV=production remix build",
+    "build": "run-s build:*",
+    "dev:css": "postcss styles --dir ./app/styles --watch",
+    "dev:remix": "remix watch",
+    "dev:node": "cross-env NODE_ENV=development nodemon --require dotenv/config ./server.js --watch ./server.js",
+    "dev": "remix build && run-p \"dev:*\"",
+    "lint": "eslint . --ext .jsx,.js",
+    "lint:init": "eslint --init"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@headlessui/tailwindcss": "^0.1.1",
+    "@remix-run/architect": "^1.7.6",
+    "@remix-run/node": "^1.7.5",
+    "@remix-run/react": "^1.7.5",
+    "classnames": "^2.3.2",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.6.7",
+    "isbot": "^3.6.5",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.7.6",
+    "@remix-run/eslint-config": "^1.7.6",
+    "@remix-run/express": "^1.7.6",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "autoprefixer": "^10.4.13",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.27.0",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
